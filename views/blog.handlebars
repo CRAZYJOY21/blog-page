@@ -1,0 +1,36 @@
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+        {{#each posts}}
+        <div class="row">
+          <div class="col-12">
+            <div class="post-entry-2 d-flex">
+              {{#if this/imageName}}
+                <div class="thumbnail order-md-2" style="background-image: url('/{{this/imageName}}')">
+                </div>
+              {{else}}
+                <div class="thumbnail order-md-2">
+                </div>
+              {{/if}}
+              <div class="contents order-md-1 pl-0">
+                <h2><a href="/post?id={{this/_id}}">{{this/title}}</a></h2>
+                <p class="mb-3">{{this/content}}</p>
+                <div class="post-meta">
+                  <span class="date-read">{{this/publishDate}} <span class="mx-1">•</span></span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="post-entry-1">
+              <h3>{{this/title}}</h3>
+              <p>Здесь будет запись 1</p>
+            </div> -->
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+</div>

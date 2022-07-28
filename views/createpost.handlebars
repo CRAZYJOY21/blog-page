@@ -1,0 +1,40 @@
+<div class="site-section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title mb-5">
+          <h2>Создать новую запись</h2>
+        </div>
+      </div>
+    </div>
+
+    <form method="post" action="/createpost" encType="multipart/form-data">
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <label for="title">Заголовок</label>
+          <input type="text" id="title" name="title" class="form-control form-control-lg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <label for="postImage">Картинка</label>
+          <input type="file" id="postImage" name="postImage" class="form-control form-control-lg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <label for="content">Текст</label>
+          <textarea type="text" id="content" name="content" col="30" rows="10" class="form-control form-control-lg"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <input type="submit" value="Создать" class="btn btn-primary py-3 px-5">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

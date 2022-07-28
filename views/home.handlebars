@@ -1,0 +1,119 @@
+<div class="site-section py-0">
+  <div class="owl-carousel hero-slide owl-style">
+
+    {{#each favoritePosts}}
+      <div class="site-section">
+        <div class="container">
+          <div class="half-post-entry d-block d-lg-flex bg-light">
+            {{#if this/imageName}}
+              <div class="img-bg" style="background-image: url('{{this/imageName}}')"></div>
+            {{/if}}
+            <div class="contents">
+              <h2><a href="/post?id={{this/_id}}">{{this/title}}</a></h2>
+              <p class="mb-3">{{this/content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>Последние записи</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {{#if singlePost}}
+          <div class="col-md-6">
+            <div class="post-entry-1" style="word-wrap: break-word;">
+              {{#if singlePost.imageName}}
+              <a href="/post?id={{singlePost/_id}}">
+                <div class="thumbnail" style="background-image: url('{{singlePost/imageName}}')"></div>
+              </a>
+              {{/if}}
+              <h2><a href="/post?id={{singlePost/_id}}">{{singlePost/title}}</a></h2>
+              <p>{{singlePost/content}}</p>
+              <div class="post-meta">
+                <span class="date-read">{{singlePost/publishDate}} <span class="mx-1">•</span></span>
+              </div>
+            </div>
+          </div>
+          {{/if}}
+
+          <div class="col-md-6">
+            {{#each posts}}
+            <div class="post-entry-2 d-flex bg-light">
+              {{#if this.imageName}}
+              <div class="thumbnail" style="background-image: url('{{this/imageName}}')"></div>
+              {{/if}}
+              <div class="contents">
+                <h2><a href="/post?id={{this._id}}">{{this/title}}</a></h2>
+                <div class="post-meta">
+                <span class="date-read">{{this/publishDate}} <span class="mx-1">•</span></span>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row sportsmans">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>Цитаты великих спортсменов, которыми я вдохновляюсь</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="post-entry-1">
+              <a href="/sportsmans"><img src="images/img_h_3.png" alt="Image" class="img-fluid"></a>
+              <h3><a href="/sportsmans">Федор Емельяненко</a></h3>
+              <a href="/sportsmans"><p>"Никому ничего не доказывай.<br/>
+              Просто молча иди к своей цели.<br/>
+              Твои поступки расскажут о тебе сами."</p></a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="post-entry-1">
+              <a href="/sportsmans"><img src="images/img_h_2.png" alt="Image" class="img-fluid"></a>
+              <a href="/sportsmans"><h3>Брюс Ли</h3></a>
+              <a href="/sportsmans"><p>"Если вас критикуют, то значит вы делаете всё правильно.<br/>
+              Потому что люди нападают на всякого у кого есть мозги."</p></a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="post-entry-1">
+              <a href="/sportsmans"><img src="images/img_h_1.png" alt="Image" class="img-fluid"></a>
+              <a href="/sportsmans"><h3>Мохаммед Али</h3></a>
+              <a href="/sportsmans"><p>"Чем больше мы помогаем другим, тем больше помогаем себе."</p></a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="post-entry-1">
+              <a href="/sportsmans"><img src="images/img_h_4.png" alt="Image" class="img-fluid"></a>
+              <a href="/sportsmans"><h3>Костя Цзю</h3></a>
+              <a href="/sportsmans"><p>"Кто-то говорит, что я талантливый, мой самый большой талант заключается в том, что я умею работать больше чем другие."</p></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
